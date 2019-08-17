@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson 2</title>
+</head>
+<body>
+<script>
+   // Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    function area(radius) {
+        radius=parseFloat(radius);
+        if(!isNaN(radius)){
+            return radius*radius*Math.PI;
+        }else {
+            return NaN;
+        }
+    }
+    function perimeter(radius) {
+        radius=parseFloat(radius);
+        if(!isNaN(radius)){
+            return radius*2*Math.PI;
+        }else {
+            return NaN;
+        }
+    }
+    let radius=prompt("Nhập Bán Kính:","");
+    radius =parseFloat(radius);
+    let dientich= area(radius);
+    let chuvi=perimeter(radius);
+    if(!isNaN(dientich)&& !isNaN(chuvi)){
+        alert("Diện tích hình tròn có R="+radius+ " là:" + dientich.toFixed(2));
+        alert("Chu vi hình tròn có R="+radius+ " là: " + chuvi.toFixed(2));
+    }else{
+        alert("Bán Kính phải là số, hãy nhập lại.")
+    }
+</script>
+</body>
+</html>

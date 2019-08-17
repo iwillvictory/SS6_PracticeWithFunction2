@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson 1</title>
+</head>
+<body>
+<script>
+    //Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    function square(number) {
+        number=parseFloat(number);
+        if(!isNaN(number)){
+            return number*number;
+        }else {
+            return NaN;
+        }
+    }
+
+    let number=prompt("Nhập vào 1 số bất kỳ:","");
+    number =parseFloat(number);
+    let result=square(number);
+    if(!isNaN(result)){
+        alert("Bình phương của " + number + " là: "+ result);
+    }else{
+        alert("Giá trị nhập vào phải là số");
+    }
+
+</script>
+</body>
+</html>

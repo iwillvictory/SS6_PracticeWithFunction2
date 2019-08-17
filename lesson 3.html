@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson 3</title>
+</head>
+<body>
+<script>
+    //Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    function factorial(number) {
+        let tich = 1;
+        if (Number.isInteger(number) && number > 0) {
+            for (let i = 1; i <= number; i++) {
+                tich *= i;
+            }
+            return tich;
+        }
+        else{
+            return NaN;
+
+        }
+    }
+
+    let num=prompt("Nhập 1 số nguyên dương:","");
+    num=parseInt(num);
+    let giaiThua=factorial(num);
+    if(!isNaN(giaiThua)){
+        alert("Giai thừa của "+ num + " là: "+ giaiThua);
+    }else{
+        alert("Phải nhập số Nguyên dương!")
+    }
+</script>
+</body>
+</html>
