@@ -8,6 +8,31 @@
     <script>
         //Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
         // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+        function countCharacter(charArr,char) {
+            let count=0;
+            for(let x of charArr){
+                if (x==char){
+                    count++;
+                }
+            }
+            if(count ==0){
+                return -1;
+            }else{
+                return count;
+            }
+        }
+
+        ///////////////////////
+        let charArr=['A','a','c','o','d','e','g','y','m','c','a','c','d'];
+        let char='d';
+        let count=countCharacter(charArr,char);
+        if(count != -1){
+            document.write("Ký tự '"+ char + "' xuất hiện " + count + " lần.")
+        }else{
+            document.write("Không tìm thấy ký tự '"+ char + "' trong mảng.")
+        }
+
+
     </script>
 </body>
 </html>

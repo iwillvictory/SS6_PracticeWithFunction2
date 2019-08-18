@@ -8,6 +8,23 @@
 <script>
     //Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
     // Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+    function isNumber(number){
+      let num= parseFloat(number);
+      if(num.toString()==number.trim()){
+          return true;
+      }else{
+          return false;
+      }
+    }
+
+    ///////////////////////////////////
+    let num=prompt("Nhập giá trị muốn kiểm tra:","");
+    if(isNumber(num)){
+        alert("là số");
+    }else{
+        alert("Không phải là số");
+    }
+
 </script>
 </body>
 </html>

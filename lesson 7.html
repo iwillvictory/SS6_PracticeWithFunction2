@@ -7,6 +7,19 @@
 <body>
     <script>
         //Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+        function swap(arr,i,j) {
+            let temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+        }
+
+        ///////////////////
+        let arr=[10,20];
+        document.write("Trước khi đổi chỗ arr[0]=" + arr[0] + " , arr[1]=" + arr[1]);
+        swap(arr,0,1);
+        document.write("<br/>Sau khi đổi chỗ arr[0]=" + arr[0] + " , arr[1]=" + arr[1]);
+
+
     </script>
 </body>
 </html>

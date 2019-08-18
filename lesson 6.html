@@ -8,6 +8,29 @@
 <script>
     //Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
     // Nếu là nguyên dương trả về true, ngược lại trả về false.
+
+    function isPositiveInteger(number){
+        if(typeof number =="number"){
+            if(Number.isInteger(number) && number >=0){
+                return true
+            }else{
+                return false;
+            };
+        }else {
+            return false;
+        }
+    }
+
+    /////////////////
+    let a=12;
+    let b=12.434;
+    let c=-2;
+    let d="1231";
+    if(isPositiveInteger(b)){
+        alert("Là Số Nguyên Dương");
+    }else{
+        alert("Không Phải số Nguyên dương");
+    }
 </script>
 </body>
 </html>

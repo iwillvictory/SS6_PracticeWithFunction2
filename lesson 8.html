@@ -7,6 +7,47 @@
 <body>
     <script>
         //Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+
+        function inverseArrayOfIntegers1(arr) {
+            let i, j;
+            if(arr.length >=2){
+                i=0;
+                j= arr.length-1;
+                while(i<j){
+                    swap(arr,i,j);
+                    i++;
+                    j--
+                }
+            }
+        }
+
+        function swap(arr,i,j) {
+            let temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+        }
+
+        function inverseArrayOfIntegers2(arr) {
+            let tempArray=[];
+            if(arr.length>=2){
+                for(let i=arr.length-1; i >=0; i--){
+                    tempArray.push(arr[i]);
+                }
+                for(let j=0; j < tempArray.length; j++){
+                    arr[j]=tempArray[j];
+                }
+            }
+        }
+
+
+
+            //////////////////////////////////
+        let arr=[12,23,34,45,56,76,78,79,89,90];
+        document.write("Mảng lúc ban đầu : " + arr.toString());
+        inverseArrayOfIntegers1(arr);
+        //inverseArrayOfIntegers2(arr);
+        document.write("<br/>Mảng sau khi đảo ngược: "+ arr.toString());
+
     </script>
 </body>
 </html>

@@ -7,6 +7,16 @@
 <body>
 <script>
     //Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    function findMin(a,b,c) {
+        if(a < b && a < c){
+            return a;
+        }else if(b < c){
+            return b;
+        }else{
+            return c;}
+    }
+    let a=1345,b=1023,c=3459;
+    alert(findMin(a,b,c));
 </script>
 </body>
 </html>
